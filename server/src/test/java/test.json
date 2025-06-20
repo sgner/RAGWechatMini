@@ -1,0 +1,28 @@
+{
+  "collection": "FileMetadata",
+  "schema": {
+    "bsonType": "object",
+    "required": ["_id", "user_id", "kb_id", "file_name", "file_size", "bucket_name", "upload_time", "chunks"],
+    "properties": {
+      "_id": { "bsonType": "string", "description": "File ID (PK)" },
+      "user_id": { "bsonType": "string", "description": "User ID (FK)" },
+      "kb_id": { "bsonType": "string", "description": "Knowledge Base ID (FK)" },
+      "file_name": { "bsonType": "string" },
+      "file_size": { "bsonType": "long" },
+      "bucket_name": { "bsonType": "string" },
+      "upload_time": { "bsonType": "date" },
+      "chunks": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "required": ["chunk_index", "chunk_id", "uploaded"],
+          "properties": {
+            "chunk_index": { "bsonType": "int" },
+            "chunk_id": { "bsonType": "string" },
+            "uploaded": { "bsonType": "bool" }
+          }
+        }
+      }
+    }
+  }
+}

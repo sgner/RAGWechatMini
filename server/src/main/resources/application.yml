@@ -1,0 +1,50 @@
+server:
+  port: 9880
+jwt:
+  secret-key: litianci0223799
+  ttl: 36000000
+  token-name: Authorization
+  admin-secret-key: 0223799litianci
+ragflow:
+  deepseek:
+    openai-base-url: http://localhost/api/v1/chats_openai
+    base-url: http://localhost/api/v1/chats
+    dataset-url: http://localhost/api/v1/datasets
+    assistant-url: http://localhost/api/v1/chats
+    conversation-url: http://localhost/api/v1/conversation/related_questions
+    api-key: ragflow-E2YzJkZDU4ZmIwNTExZWY4MDcxMDI0Mm
+minio:
+  endpoint: http://localhost:9100
+  access-key: "minioadmin"
+  secret-key: "minioadmin"
+  bucket-prefix: "deepragforge"
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/deep_rag_forge?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: cfwrettt.com
+  ai:
+    openai:
+      api-key: ragflow-E2YzJkZDU4ZmIwNTExZWY4MDcxMDI0Mm
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/deep_RAG_forge
+    redis:
+      host: localhost
+      port: 6379
+      lettuce:
+        pool:
+          max-active: 10
+          max-idle: 10
+          min-idle: 1
+          time-between-eviction-runs: 10s
+weixin:
+  base-url: https://api.weixin.qq.com/sns/jscode2session
+  appid: wx3564476e5ff43de0
+  secret-key: 35a38b61591ba33503761bb8b584433d
+#  appid: wxd546ba6d10efb3ae
+#  secret-key: 1552f57e2e62191119a48513ceccb4ce
