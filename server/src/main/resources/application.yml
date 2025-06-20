@@ -44,7 +44,7 @@ spring:
           time-between-eviction-runs: 10s
 weixin:
   base-url: https://api.weixin.qq.com/sns/jscode2session
-  appid: wx3564476e5ff43de0
-  secret-key: 35a38b61591ba33503761bb8b584433d
-#  appid: wxd546ba6d10efb3ae
-#  secret-key: 1552f57e2e62191119a48513ceccb4ce
+  appid: 
+  secret-key: 
+#  appid: 
+#  secret-key: 
